@@ -1,19 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro'
-import Header from '../components/Header.astro'
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Ecomarket Shopping API">
 	<Navigation />
 	<Header />
-
+	<About />
 
 	<script>
-		const btnMenu = document.getElementById('btn-menu')
-		btnMenu?.addEventListener('click', () => {
-			document.querySelector('.navigation')?.classList.toggle('navigation--active')
-			btnMenu.classList.toggle('hamburguer--active')
-		})
+		const btnMenu = document.getElementById("btn-menu");
+		btnMenu?.addEventListener("click", () => {
+			document
+				.querySelector(".navigation")
+				?.classList.toggle("navigation--active");
+			btnMenu.classList.toggle("hamburguer--active");
+		});
 	</script>
 </Layout>
