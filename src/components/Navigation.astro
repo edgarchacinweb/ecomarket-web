@@ -32,6 +32,9 @@ import Hamburguer from "./Hamburguer.astro"
 
 <style>
     .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 150px;
         padding: 15px;
@@ -40,6 +43,7 @@ import Hamburguer from "./Hamburguer.astro"
         box-shadow: 0 5px 5px 1px #cbcbcb;
         overflow: hidden;
         transition: height 300ms ease;
+        z-index: 100;
     }
 
     .navigation--active {
