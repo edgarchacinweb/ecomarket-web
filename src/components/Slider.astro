@@ -1,0 +1,77 @@
+---
+
+---
+
+<section class="slider">
+    <div class="slider-hero">
+        <img src="microsoft.png" alt="Microsoft logo" />
+        <img src="mercado-libre.png" alt="Mercado libre logo" />
+        <img src="aliexpress.png" alt="Aliexpress logo" />
+        <img src="farmatodo.png" alt="Farmatodo logo" />
+        <img src="traki.png" alt="Traki logo" />
+        <img src="macuto.png" alt="Macuto logo" />
+        <img src="polar.png" alt="Polar logo" />
+        <img src="fibex.png" alt="Fibex telecom logo" />
+    </div>
+    <div class="slider-hero">
+        <img src="microsoft.png" alt="Microsoft logo" />
+        <img src="mercado-libre.png" alt="Mercado libre logo" />
+        <img src="aliexpress.png" alt="Aliexpress logo" />
+        <img src="farmatodo.png" alt="Farmatodo logo" />
+        <img src="traki.png" alt="Traki logo" />
+        <img src="macuto.png" alt="Macuto logo" />
+        <img src="polar.png" alt="Polar logo" />
+        <img src="fibex.png" alt="Fibex telecom logo" />
+    </div>
+</section>
+
+<style>
+    .slider {
+        position: relative;
+        width: 100%;
+        padding: 0.5rem 0;
+        overflow: hidden;
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .slider::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(
+            90deg,
+            rgba(232, 232, 232, 1) 0%,
+            rgba(9, 9, 121, 0) 12%,
+            rgba(194, 194, 222, 0) 88%,
+            rgba(232, 232, 232, 1) 100%
+        );
+    }
+
+    .slider-hero {
+        display: flex;
+        width: calc((100px + 2.5rem) * 8);
+        gap: 2.5rem;
+        align-items: center;
+        animation: slider-animation 60s linear infinite;
+    }
+
+    .slider-hero img {
+        width: 100px;
+    }
+
+    @keyframes slider-animation {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        100% {
+            -webkit-transform: translateX(calc((100px + 2.5rem) * -8));
+            transform: translateX(calc((100px + 2.5rem) * -8));
+        }
+    }
+</style>
