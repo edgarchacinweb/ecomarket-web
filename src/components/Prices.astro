@@ -1,0 +1,56 @@
+---
+import PricesCard from "./PricesCard.astro";
+---
+
+<section class="prices" id="prices">
+    <h2 class="prices-title">Prices list</h2>
+    <div class="cards-container">
+        <PricesCard
+            title="Basic"
+            price={0}
+            items={[
+                "Publication limit of 7 products",
+                "Payment Gateway with commisions",
+                "Standard security",
+                "No user registration",
+            ]}
+        />
+
+        <PricesCard
+            title="Standard"
+            price={12}
+            items={[
+                "Publication limit of 30 products",
+                "Commission-free payment gateway",
+                "Advanced Security",
+                "Limited user registrarion available",
+            ]}
+        />
+
+        <PricesCard
+            title="Basic"
+            price={30}
+            items={[
+                "Unlimited publications",
+                "Commission-free payment gateway",
+                "Advanced Security",
+                "Unlimited user registration",
+            ]}
+        />
+    </div>
+</section>
+
+<style>
+    .prices {
+        width: 100%;
+        background-color: #292929;
+        padding: 2rem;
+        color: #ffffff;
+    }
+
+    .prices-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+</style>

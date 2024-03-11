@@ -1,0 +1,55 @@
+---
+const { title, price, items } = Astro.props;
+---
+
+<article class="card">
+    <h3 class="card-title">{title} Plan</h3>
+    <ul class="card-list">
+        {items.map((item: string) => <li class="card-item">{item}</li>)}
+    </ul>
+    <section class="price-container">
+        <h4 class="card-price">{price > 0 ? `${price} USD` : "For free"}</h4>
+        <small class="card-month">Monthly price</small>
+    </section>
+</article>
+
+<style>
+    .card {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1.5rem 3rem;
+        border-radius: 1.5rem;
+        background-image: linear-gradient(to bottom, #141414 80%, #292929);
+        border: 2px solid rgba(126, 126, 126, 0.7);
+    }
+
+    .card-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .card-list {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .card-item {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .price-container {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .card-price {
+        line-height: 1rem;
+    }
+
+    .card-month {
+        font-size: 1rem;
+    }
+</style>
