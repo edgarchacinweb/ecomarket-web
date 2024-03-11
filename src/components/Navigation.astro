@@ -1,0 +1,104 @@
+---
+import Hamburguer from "./Hamburguer.astro"
+---
+<nav class="navigation">
+    <section class="navigation-logo">
+        <div class="navigation-hero">
+            <div class="navigation-image">
+                <img src="/logo.jpg" alt="Company logo" />
+            </div>
+            <h1 class="navigation-title">Ecomarket API</h1>
+        </div>
+        <Hamburguer />
+    </section>
+
+    <section class="navigation-links">
+        <ul class="navigation-list">
+            <li class="navigation-item">
+                <a href="#home" class="navigation-cta">Home</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#about" class="navigation-cta">About</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#prices" class="navigation-cta">Prices</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#services" class="navigation-cta">Services</a>
+            </li>
+        </ul>
+    </section>
+</nav>
+
+<style>
+    .navigation {
+        width: 100%;
+        height: 150px;
+        padding: 15px;
+        background-color: #ffffff;
+        color: #ffffff;
+        box-shadow: 0 5px 5px 1px #cbcbcb;
+        overflow: hidden;
+        transition: height 300ms ease;
+    }
+
+    .navigation--active {
+        height: 200px;
+    }
+
+    .navigation-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation-hero {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navigation-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid #000000;
+        overflow: hidden;
+    }
+
+    .navigation-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigation-title {
+        font-size: 1.7rem;
+        text-shadow: 0 0 4px #333333;
+    }
+
+    .navigation-links {
+        padding: 25px 25px 0;
+    }
+
+    .navigation-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .navigation-item {
+        list-style: none;
+    }
+
+    .navigation-cta {
+        color: #333333;
+        font-size: 1.1rem;
+        transition: text-shadow 300ms ease;
+    }
+
+    .navigation-cta:hover {
+        text-shadow: 0px 2px 5px #b8b8b8;
+    }
+</style>

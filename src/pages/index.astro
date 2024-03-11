@@ -1,8 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1>Hola mundo</h1>
+	<Navigation />
+
+	<script>
+		const btnMenu = document.getElementById('btn-menu')
+		btnMenu?.addEventListener('click', () => {
+			document.querySelector('.navigation')?.classList.toggle('navigation--active')
+			btnMenu.classList.toggle('hamburguer--active')
+		})
+	</script>
 </Layout>
