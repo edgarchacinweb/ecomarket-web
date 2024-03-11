@@ -1,0 +1,57 @@
+---
+const { title, img } = Astro.props;
+---
+
+<div class="card">
+    <section class="card-brand">
+        <img src={img} alt={`Service ${title}`} />
+    </section>
+    <section class="card-container-title">
+        <h4 class="card-title">{title}</h4>
+    </section>
+</div>
+
+<style>
+    .card {
+        width: 40%;
+        height: 160px;
+        margin: 1rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+
+    .card:hover {
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-brand {
+        width: 100%;
+        height: 100px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+        background-color: #0e0e0e;
+        box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-brand img {
+        width: 30%;
+        filter: invert(100%);
+    }
+
+    .card-container-title {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+</style>
